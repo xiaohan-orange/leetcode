@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package userinformation;
+
+service UserLog{
+    rpc Register(UserInfo) returns(Responce){}
+    rpc LogIn(UserInfo) returns(responce){}
+}
+
+message UserInfo{
+    required string userName = 1;
+    required string password = 2;
+}
+
+message Responce{
+    required string status = 1; 
+}
